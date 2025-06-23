@@ -1,20 +1,19 @@
-cmake_minimum_required(VERSION 3.10)
+
+cmake_minimum_required(VERSION 3.16)
 project(IKSolver)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Locate Eigen
-find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
-  PATHS /usr/local/include /opt/homebrew/include /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3
-)
+# Automatically gather all .cpp files from the src directory
+file(GLOB SOURCES "core/src/*.cpp")
 
-if (EIGEN3_INCLUDE_DIR)
-    message(STATUS "Found Eigen at ${EIGEN3_INCLUDE_DIR}")
-else()
-    message(FATAL_ERROR "Eigen not found. Please check your installation.")
-endif()
+# Create the executable using the gathered sources
+add_executable(ik_solver ${SOURCES})
 
-# Add include directories
-include_directories(${CMAKE_SOURCE_DIR}/core/inc ${EIGEN3_INCLUDE_DIR})
+# Include directories
+target_include_directories(ik_solver PRIVATE core/inc)
 
-add_executable(ik_solver core/src/main.cpp core/src/joint.cpp)
+# Link libraries (Eigen in this case)
+find_package(Eigen3 REQUIRED)
+target_link_libraries(ik_solver PRIVATE Eigen3::Eigen)
+

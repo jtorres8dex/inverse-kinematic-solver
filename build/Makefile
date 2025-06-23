@@ -129,30 +129,6 @@ ik_solver/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ik_solver.dir/build.make CMakeFiles/ik_solver.dir/build
 .PHONY : ik_solver/fast
 
-core/src/joint.o: core/src/joint.cpp.o
-.PHONY : core/src/joint.o
-
-# target to build an object file
-core/src/joint.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ik_solver.dir/build.make CMakeFiles/ik_solver.dir/core/src/joint.cpp.o
-.PHONY : core/src/joint.cpp.o
-
-core/src/joint.i: core/src/joint.cpp.i
-.PHONY : core/src/joint.i
-
-# target to preprocess a source file
-core/src/joint.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ik_solver.dir/build.make CMakeFiles/ik_solver.dir/core/src/joint.cpp.i
-.PHONY : core/src/joint.cpp.i
-
-core/src/joint.s: core/src/joint.cpp.s
-.PHONY : core/src/joint.s
-
-# target to generate assembly for a file
-core/src/joint.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ik_solver.dir/build.make CMakeFiles/ik_solver.dir/core/src/joint.cpp.s
-.PHONY : core/src/joint.cpp.s
-
 core/src/main.o: core/src/main.cpp.o
 .PHONY : core/src/main.o
 
@@ -186,9 +162,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ik_solver"
-	@echo "... core/src/joint.o"
-	@echo "... core/src/joint.i"
-	@echo "... core/src/joint.s"
 	@echo "... core/src/main.o"
 	@echo "... core/src/main.i"
 	@echo "... core/src/main.s"

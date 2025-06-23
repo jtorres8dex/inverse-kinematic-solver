@@ -81,12 +81,12 @@ clean: CMakeFiles/ik_solver.dir/clean
 CMakeFiles/ik_solver.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ik_solver.dir/build.make CMakeFiles/ik_solver.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ik_solver.dir/build.make CMakeFiles/ik_solver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/juliantorres/projects/inverse-kinematic-solver/build/CMakeFiles --progress-num=1,2,3 "Built target ik_solver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/juliantorres/projects/inverse-kinematic-solver/build/CMakeFiles --progress-num=1,2 "Built target ik_solver"
 .PHONY : CMakeFiles/ik_solver.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ik_solver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/juliantorres/projects/inverse-kinematic-solver/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/juliantorres/projects/inverse-kinematic-solver/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ik_solver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/juliantorres/projects/inverse-kinematic-solver/build/CMakeFiles 0
 .PHONY : CMakeFiles/ik_solver.dir/rule

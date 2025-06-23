@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ik_solver.dir/core/src/joint.cpp.o"
-  "CMakeFiles/ik_solver.dir/core/src/joint.cpp.o.d"
   "CMakeFiles/ik_solver.dir/core/src/main.cpp.o"
   "CMakeFiles/ik_solver.dir/core/src/main.cpp.o.d"
   "ik_solver"

@@ -1,8 +1,6 @@
+rm -r build/
 
-
-cd build
-rm -rf * 
+mkdir build && cd build
 
 cmake ..
-
-make -j $(nproc)
+make 

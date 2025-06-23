@@ -213,8 +213,8 @@ CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Path to a file.
-EIGEN3_INCLUDE_DIR:PATH=/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=/opt/homebrew/share/eigen3/cmake
 
 //Value Computed by CMake
 IKSolver_BINARY_DIR:STATIC=/Users/juliantorres/projects/inverse-kinematic-solver/build

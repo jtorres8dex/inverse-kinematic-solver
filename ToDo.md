@@ -1,4 +1,0 @@
-- Manipulator class
-- 
-- Frame class
-- Transformation methods

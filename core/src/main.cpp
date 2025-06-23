@@ -1,24 +1,26 @@
-#include "Joint.hpp"
-#include <iostream>
+#include "LinearAlgebra.hpp"
 
-// config
-const double minQLimit = -10.0;
-const double maxQLimit = 10.0;
-const double minQdotLimit = -10.0;
-const double maxQdotLimit = 10.0;
+using namespace LinearAlgebra;
+using namespace std;
 
 int main() {
-    // Create a revolute joint
-    // RevoluteJoint revolute(-M_PI, M_PI);
-    // revolute.setQ(M_PI / 4);
-    // std::cout << "Revolute Joint Q: " << revolute.getQ() << std::endl;
-    // std::cout << "Revolute Joint Transformation:\n" << revolute.getTransform() << std::endl;
+    MemoryPool pool(4096);
 
-    // // Create a prismatic joint
-    // PrismaticJoint prismatic(0.0, 2.0);
-    // prismatic.setQ(1.5);
-    // std::cout << "Prismatic Joint Q: " << prismatic.getQ() << std::endl;
-    // std::cout << "Prismatic Joint Transformation:\n" << prismatic.getTransform() << std::endl;
+    Matrix A = Matrix::identity(3, &pool);
+    Vector v(3, &pool);
+    v[0] = 1.0; v[1] = 2.0; v[2] = 3.0;
+    v.print();
+    Vector result = A * v;
+    cout << "matrix times a vec: ";
+    result.print();
 
-    return 0;
+    Matrix B(3, 3, &pool);
+    for (size_t i = 0; i < 3; ++i)
+        for (size_t j = 0; j < 3; ++j)
+            B(i, j) = i + j;
+
+    Matrix C = A + B;
+    C.print();
+
+    
 }

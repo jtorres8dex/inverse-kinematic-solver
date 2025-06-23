@@ -109,6 +109,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
   "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/Platform/Darwin.cmake"
   "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/Platform/UnixPaths.cmake"
+  "/opt/homebrew/share/eigen3/cmake/Eigen3Config.cmake"
+  "/opt/homebrew/share/eigen3/cmake/Eigen3ConfigVersion.cmake"
+  "/opt/homebrew/share/eigen3/cmake/Eigen3Targets.cmake"
   )
 
 # The corresponding makefile is:
