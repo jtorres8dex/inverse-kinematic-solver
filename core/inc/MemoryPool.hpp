@@ -38,7 +38,6 @@ public:
     {
         pool = static_cast<char*>(std::malloc(totalBytes));
         if (nullptr == pool){
-            std::cout << "Memory pool out of space!" << std::endl;
             throw std::bad_alloc();
         }
         capacity = totalBytes; 
@@ -52,6 +51,7 @@ public:
         //  round offset up to the next multiple of alignment
         size_t alignedOffset = (offset + alignment - 1) &  ~(alignment - 1);
         if (alignedOffset + size > capacity){
+            std::cout << "Memory pool out of space!" << std::endl;
             throw std::bad_alloc();
         }
         // void* ptr that points to raw (untyped) memory address, must cast to dereference
