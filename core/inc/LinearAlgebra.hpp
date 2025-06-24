@@ -103,6 +103,20 @@ public:
             data = new double[r * c];
     }
 
+    static void MatrixMultiply(Matrix& result, const Matrix& A, const Matrix& B) {
+        assert(A.numCols() == B.numRows());
+        assert(result.numRows() == A.numRows());
+        assert(result.numCols() == B.numCols());
+
+        for (size_t i = 0; i < A.numRows(); ++i) {
+            for (size_t j = 0; j < B.numCols(); ++j) {
+                result(i, j) = 0.0;
+                for (size_t k = 0; k < A.numCols(); ++k)
+                    result(i, j) += A(i, k) * B(k, j);
+            }
+        }
+    }
+
     double& operator()(size_t i, size_t j) {
         assert(i < rows && j < cols);
         return data[i * cols + j];
